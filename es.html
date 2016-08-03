@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function changeText() {
+    x = document.getElementById("mySelect");
+    x.options[x.selectedIndex].text = "Melon";
+}
+
+function mp3Files() {
+  var input = "https://drive.google.com/file/d/78BygKccgGms9ET2lUM0RPVUI1T0U/view?usp=sharing";
+
+  var res = input.match(/https:\/\/drive.google.com\/file\/d\/([a-zA-Z0-9_]+)\//)
+
+  var googleDriveFileID = res[1];
+  alert(googleDriveFileID);
+
+}
+
+</script>
+</head>
+<body>
+
+<!--!
+<form>
+Select your favorite fruit:
+<select id="mySelect">
+  <option>Apple</option>
+    <option>Orange</option>
+      <option>Pineapple</option>
+        <option>Banana</option>
+</select>
+<br><br>
+<input type="button" onclick="mp3Files()" value="Set text of selected option">
+<input type="button" onclick="changeText()" value="Set text of selected option">
+</form>
+ <source src="https://drive.google.com/open?id=0BxpaRh9Sl9aqQUd1YldJTTVVU0E" type="audio/mp3">
+-->
+
+<audio controls>
+ <source src="https://drive.google.com/file/d/0BxpaRh9Sl9aqQUd1YldJTTVVU0E/edit" type="audio/mp3">
+ <p>This browser does not support HTML5 audio</p>
+  </audio>
+
+
+</body>
+</html>
+
